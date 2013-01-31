@@ -21,3 +21,11 @@ executable site
                      , network    == 2.3.*
                      , bytestring == 0.9.*
                      , hakyll     == 4.1.*
+
+executable deploy
+  main-is:             deploy.hs
+  build-depends:       base            == 4.5.*
+                     , shelly          == 0.15.*
+                     , text            == 0.11.*
+                     , system-filepath == 0.4.*
+                     , time            == 1.4
