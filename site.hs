@@ -8,6 +8,7 @@ import           Hakyll
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
+    {-
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -15,6 +16,7 @@ main = hakyll $ do
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
+        -}
 
     match "data/*" $ do
         route   idRoute
@@ -74,5 +76,4 @@ postList :: ([Item String] -> [Item String]) -> Compiler String
 postList sortFilter = do
     posts   <- sortFilter <$> loadAll "posts/*"
     itemTpl <- loadBody "templates/post-item.html"
-    list    <- applyTemplateList itemTpl postCtx posts
-    return list
+    applyTemplateList itemTpl postCtx posts
