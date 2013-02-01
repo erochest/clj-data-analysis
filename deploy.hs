@@ -1,15 +1,14 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE ExtendedDefaultRules #-}
+{-# LANGUAGE NoImplicitPrelude #-}
 {-# OPTIONS_GHC -fno-warn-type-defaults #-}
 
 module Main where
 
+import ClassyPrelude
 import Shelly
-import Data.Monoid
 import Data.Time
-import Data.Text.Lazy as LT
-import Prelude hiding (FilePath)
-import Filesystem.Path.CurrentOS
+import Data.Text.Lazy as LT hiding (isPrefixOf, filter)
 
 default (LT.Text)
 
@@ -23,11 +22,11 @@ main :: IO ()
 main = shelly $ verbosely $ do
     run_ "./dist/build/site/site" ["rebuild"]
     chdir "_deploy" $ git_ "checkout" ["gh-pages"]
-    mapM_ rm_rf =<< Prelude.filter (not . isHidden) <$> ls "_deploy"
+    mapM_ rm_rf =<< filter (not . isHidden) <$> ls "_deploy"
     mapM_ (`cp_r` "_deploy") =<< ls "_site"
     chdir "_deploy" $ do
         now <- liftIO getCurrentTime
         git_ "add"    ["-A"]
-        git_ "commit" ["-m", ("deployed site on " <>) . LT.pack $ show now]
+        git_ "commit" ["-m", "deployed site on " ++ show now]
         git_ "push"   []
 
