@@ -1,0 +1,47 @@
+susan,Susan Forman
+barbara,Barbara Wright
+ian,Ian Chesterton
+vicki,Vicki
+steven,Steven Taylor
+katarina,Katarina
+sara,Sara Kingdom
+dodo,Dodo Chaplet
+polly,Polly
+ben,Ben Jackson
+jamie,Jamie McCrimmon
+victoria,Victoria Waterfield
+zoe,Zoe Heriot
+brigadier,Brigadier Lethbridge-Stewart
+liz,Liz Shaw
+jo,Jo Grant
+sarah jane,Sarah Jane Smith
+harry,Harry Sullivan
+leela,Leela
+k-9 mark i,K-9 Mark I
+k-9 mark ii,K-9 Mark II
+romana,Romana
+adric,Adric
+nyssa,Nyssa
+tegan,Tegan Jovanka
+vislor,Vislor Turlough
+kamelion,Kamelion
+peri,Peri Brown
+melanie,Melanie Bush
+ace,Ace
+grace,Grace Holloway
+rose,Rose Tyler
+adam,Adam Mitchell
+jack,Jack Harkness
+mickey,Mickey Smith
+donna,Donna Noble
+martha,Martha Jones
+astrid,Astrid Peth
+jackson,Jackson Lake
+rosita,Rosita Farisi
+christina,Christina de Souza
+adelaide,Adelaide Brooke
+wilfred,Wilfred Mott
+amy,Amy Pond
+rory,Rory Williams
+river,River Song
+craig,Craig Owens
