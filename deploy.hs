@@ -1,6 +1,6 @@
-{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE ExtendedDefaultRules #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude    #-}
+{-# LANGUAGE OverloadedStrings    #-}
 {-# OPTIONS_GHC -fno-warn-type-defaults #-}
 
 module Main where
