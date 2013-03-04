@@ -34,7 +34,6 @@ body {
         background-color: hsl($hue, $sat, 99%);
         height: golden-ratio(2em, 2);
         border: 1px solid $full;
-        /* TODO: turn this off when at the top of the page */
         box-shadow: 0 0 2px 2px hsla($hue, $sat, $light, 0.3);
 
         * {
