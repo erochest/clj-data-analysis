@@ -4,11 +4,82 @@
 @import 'opinionated';
 @import 'chromeframe';
 
+/* Color scheme */
+$hue           : 17;
+$sat           : 98%;
+$light         : 21%;
+$accent-offset : 180;
+$bg            : hsl($hue, $sat, 97%);
+$color         : hsl($hue, $sat, 10%);
+$full          : hsl($hue, $sat, $light);
+$accent        : hsl($hue+$accent-offset, $sat, $light);
+$accent-text   : hsl($hue+$accent-offset, $sat, 90%);
+
+$page-width    : 5in;
+
 /* Add styles here. */
 body {
-    font-family: 'ABeeZee', sans-serif;
+    font-family: 'Inder', sans-serif;
+    background-color: $bg;
+    color: $color;
+
+    > div {
+        width: $page-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    > header {
+        width: 100%;
+        background-color: hsl($hue, $sat, 99%);
+        height: golden-ratio(2em, 2);
+        border: 1px solid $full;
+        /* TODO: turn this off when at the top of the page */
+        box-shadow: 0 0 2px 2px hsla($hue, $sat, $light, 0.3);
+
+        * {
+            width: $page-width;
+            margin-top: 0;
+            padding-top: 0.75em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    > footer {
+        background-color: $full;
+        color: $bg;
+
+        width: $page-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
+
+footer {
+    font-size: golden-ratio(1em, -1);
+
+    ul
+    {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        display: inline;
+        vertical-align: top;
+
+        &:after {
+            content: ' ·'
+        }
+
+        div {
+            display: inline-block;
+        }
+    }
+}
 
 @import 'h5bphelpers';
 @import 'clearfix';
