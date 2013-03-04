@@ -47,15 +47,24 @@ body {
     }
 
     > footer {
-        background-color: $full;
-        color: $bg;
+        border: 1px solid hsl($hue, $sat, 80%);
+        background-color: hsl($hue, $sat, 90%);
 
         width: $page-width;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 1em;
+
+        div {
+            margin-left: 1em;
+        }
     }
 }
 
+header a {
+    text-decoration: none;
+    color: $color;
+}
 
 footer {
     font-size: golden-ratio(1em, -1);
@@ -78,6 +87,10 @@ footer {
             display: inline-block;
         }
     }
+}
+
+code {
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 @import 'h5bphelpers';
