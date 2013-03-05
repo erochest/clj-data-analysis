@@ -66,11 +66,16 @@ header a {
     color: $color;
 }
 
+section {
+    p:first-child {
+        font-size: larger;
+    }
+}
+
 footer {
     font-size: golden-ratio(1em, -1);
 
-    ul
-    {
+    ul {
         list-style-type: none;
         padding-left: 0;
     }
