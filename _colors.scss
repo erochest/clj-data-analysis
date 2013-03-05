@@ -1,0 +1,12 @@
+
+/* Color scheme */
+$hue           : 17;
+$sat           : 98%;
+$light         : 21%;
+$accent-offset : 180;
+$bg            : hsl($hue, $sat, 97%);
+$color         : hsl($hue, $sat, 10%);
+$full          : hsl($hue, $sat, $light);
+$accent        : hsl($hue+$accent-offset, $sat, $light);
+$accent-text   : hsl($hue+$accent-offset, $sat, 90%);
+
