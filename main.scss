@@ -4,99 +4,10 @@
 @import 'opinionated';
 @import 'chromeframe';
 
-/* Color scheme */
-$hue           : 17;
-$sat           : 98%;
-$light         : 21%;
-$accent-offset : 180;
-$bg            : hsl($hue, $sat, 97%);
-$color         : hsl($hue, $sat, 10%);
-$full          : hsl($hue, $sat, $light);
-$accent        : hsl($hue+$accent-offset, $sat, $light);
-$accent-text   : hsl($hue+$accent-offset, $sat, 90%);
-
-$page-width    : 5in;
-
-/* Add styles here. */
-body {
-    font-family: 'Inder', sans-serif;
-    background-color: $bg;
-    color: $color;
-
-    > div {
-        width: $page-width;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    > header {
-        width: 100%;
-        background-color: hsl($hue, $sat, 99%);
-        height: golden-ratio(2em, 2);
-        border: 1px solid $full;
-        box-shadow: 0 0 2px 2px hsla($hue, $sat, $light, 0.3);
-
-        * {
-            width: $page-width;
-            margin-top: 0;
-            padding-top: 0.75em;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-    }
-
-    > footer {
-        border: 1px solid hsl($hue, $sat, 80%);
-        background-color: hsl($hue, $sat, 90%);
-
-        width: $page-width;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1em;
-
-        div {
-            margin-left: 1em;
-        }
-    }
-}
-
-header a {
-    text-decoration: none;
-    color: $color;
-}
-
-section {
-    p:first-child {
-        font-size: larger;
-    }
-}
-
-footer {
-    font-size: golden-ratio(1em, -1);
-
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    li {
-        display: inline;
-        vertical-align: top;
-
-        &:after {
-            content: ' ·'
-        }
-
-        div {
-            display: inline-block;
-        }
-    }
-}
-
-code {
-    font-family: 'Ubuntu Mono', monospace;
-}
+/* The block of my styles. */
+@import 'colors';
+@import 'dimensions';
+@import 'errstyles';
 
 @import 'h5bphelpers';
 @import 'clearfix';
