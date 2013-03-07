@@ -1,5 +1,5 @@
 
-body {
+#container {
     font-family: 'Inder', sans-serif;
     background-color: $bg;
     color: $color;
@@ -41,6 +41,15 @@ header a {
 }
 
 section {
+    h1 {
+        font-size: 1.4em;
+        font-weight: bold;
+        &:first-child {
+            margin-top: 0;
+            margin-bottom: 0.1em;
+        }
+    }
+
     p:first-child {
         font-size: larger;
     }
