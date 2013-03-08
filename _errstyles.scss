@@ -1,9 +1,11 @@
 
-#container {
+body {
     font-family: 'Inder', sans-serif;
     background-color: $bg;
     color: $color;
+}
 
+#container {
     > header {
         width: 100%;
         background-color: hsl($hue, $sat, 99%);
