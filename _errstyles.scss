@@ -8,7 +8,7 @@ body {
 #container {
     > header {
         width: 100%;
-        background-color: hsl($hue, $sat, 99%);
+        background-color: hsl($hue, $sat, $l3);
         height: golden-ratio(2em, 2);
         border: 1px solid $full;
         box-shadow: 0 0 2px 2px hsla($hue, $sat, $light, 0.3);
@@ -28,8 +28,8 @@ body {
     }
 
     > footer {
-        border: 1px solid hsl($hue, $sat, 80%);
-        background-color: hsl($hue, $sat, 90%);
+        border: 1px solid hsl($hue, $sat, $l1);
+        background-color: hsl($hue, $sat, $l2);
 
         div {
             margin-left: 1em;
@@ -38,6 +38,11 @@ body {
 }
 
 header a {
+    text-decoration: none;
+    color: $color;
+}
+
+h1 a {
     text-decoration: none;
     color: $color;
 }
