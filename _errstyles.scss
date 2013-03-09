@@ -6,11 +6,19 @@ body {
 }
 
 #container {
+    a {
+        color: hsl($hue, $sat, $l1);
+    }
+
+    h1 a {
+        color: $color;
+    }
+
     > header {
         width: 100%;
-        background-color: hsl($hue, $sat, $l3);
+        background-color: hsl($hue, $sat, $l4);
         height: golden-ratio(2em, 2);
-        border: 1px solid $full;
+        border: 1px solid hsl($hue, $sat, $l1);
         box-shadow: 0 0 2px 2px hsla($hue, $sat, $light, 0.3);
 
         * {
@@ -29,7 +37,12 @@ body {
 
     > footer {
         border: 1px solid hsl($hue, $sat, $l1);
+        color: hsl($hue, $sat, $l5);
         background-color: hsl($hue, $sat, $l2);
+
+        a {
+            color: hsl($hue, $sat, $l5);
+        }
 
         div {
             margin-left: 1em;
