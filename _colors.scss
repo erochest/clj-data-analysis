@@ -1,12 +1,25 @@
 
 /* Color scheme */
-$hue           : 17;
-$sat           : 98%;
-$light         : 21%;
+$hue : 270;
+
+$sat : 10%;
+$s0  : 10%;
+$s1  : 26%;
+$s2  : 50%;
+$s3  : 70%;
+
+$light : 80%;
+$l0    : 10%;
+$l1    : 60%;
+$l2    : 70%;
+$l3    : 80%;
+$l4    : 90%;
+$l5    : 97%;
+
 $accent-offset : 180;
-$bg            : hsl($hue, $sat, 97%);
-$color         : hsl($hue, $sat, 10%);
+$bg            : hsl($hue, $sat, $l3);
+$color         : hsl($hue, $sat, $l0);
 $full          : hsl($hue, $sat, $light);
-$accent        : hsl($hue+$accent-offset, $sat, $light);
-$accent-text   : hsl($hue+$accent-offset, $sat, 90%);
+$accent        : hsl($hue+$accent-offset, $s3, $light);
+$accent-text   : hsl($hue+$accent-offset, $s3, $l2);
 
