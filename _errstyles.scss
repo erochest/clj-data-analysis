@@ -102,3 +102,14 @@ code {
     font-family: 'Ubuntu Mono', monospace;
 }
 
+.index {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    nav {
+        margin: 1em 0;
+        text-align: right;
+    }
+}
+
