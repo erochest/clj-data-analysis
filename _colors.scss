@@ -1,6 +1,6 @@
 
 /* Color scheme */
-$hue : 270;
+$hue : 20;
 
 $sat : 10%;
 $s0  : 10%;
@@ -17,7 +17,7 @@ $l4    : 90%;
 $l5    : 97%;
 
 $accent-offset : 180;
-$bg            : hsl($hue, $sat, $l3);
+$bg            : hsl($hue, $sat, $l4);
 $color         : hsl($hue, $sat, $l0);
 $full          : hsl($hue, $sat, $light);
 $accent        : hsl($hue+$accent-offset, $s3, $light);
