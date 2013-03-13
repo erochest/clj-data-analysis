@@ -1,4 +1,7 @@
 
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
 body {
     font-family: 'Inder', sans-serif;
     background-color: $bg;
@@ -48,6 +51,11 @@ body {
         > div {
             margin-left: 1em;
         }
+
+        .column {
+            @include span-columns(12);
+            @include omega();
+        }
     }
 }
 
@@ -79,19 +87,17 @@ section {
 footer {
     font-size: golden-ratio(1em, -1);
 
+    h1 {
+        font-size: golden-ratio(1em, 1);
+    }
+
     ul {
         list-style-type: none;
         padding-left: 0;
     }
 
     li {
-        display: inline;
         vertical-align: top;
-        padding-right: 0.5em;
-
-        + li:before {
-            content: '· '
-        }
 
         div {
             display: inline-block;

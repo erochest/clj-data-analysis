@@ -1,11 +1,8 @@
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@import 'bourbon/bourbon';
+@import 'neat/neat';
 
+@media screen and (min-width: $medium-width) {
     #container {
         > header * {
             width: $page-width;
@@ -19,13 +16,18 @@
             margin-right: auto;
         }
 
-        > footer {
+        > footer > div {
             width: $page-width;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 1em;
+
+            .column {
+                @include span-columns(3);
+            }
         }
     }
+}
 
+@media screen and (min-width: $wide-width) {
 }
 
