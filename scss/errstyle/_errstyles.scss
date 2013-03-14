@@ -1,0 +1,141 @@
+
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+body {
+    font-family: 'Inder', sans-serif;
+    background-color: $bg;
+    color: $color;
+}
+
+#container {
+    a {
+        color: hsl($hue, $sat, $l1);
+    }
+
+    h1 a {
+        color: $color;
+    }
+
+    > header {
+        width: 100%;
+        background-color: hsl($hue, $sat, $l3);
+        height: golden-ratio(2em, 2);
+        border: 1px solid hsl($hue, $sat, $l1);
+        box-shadow: 0 0 2px 2px hsla($hue, $sat, $light, 0.3);
+
+        * {
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-top: 0;
+            padding-top: 0.75em;
+        }
+
+    }
+
+    > div {
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+
+    > footer {
+        // For some reason, this isn't sticking.
+        // background: hsl($hue, $sat, $l4);
+        background: $bg;
+        border: 1px solid hsl($hue, $sat, $l1);
+
+        a {
+            color: $color;
+        }
+
+        > div {
+            margin-left: 1em;
+        }
+
+        .column {
+            @include span-columns(12);
+            @include omega();
+        }
+    }
+}
+
+header a {
+    text-decoration: none;
+    color: $color;
+}
+
+h1 a {
+    text-decoration: none;
+    color: $color;
+}
+
+article, section {
+    h1 {
+        font-size: 1.4em;
+        font-weight: bold;
+        &:first-child {
+            margin-top: 0;
+            margin-bottom: 0.1em;
+        }
+    }
+
+    p:first-child {
+        font-size: larger;
+    }
+
+    footer {
+        ul li {
+            display: inline;
+            padding-right: 0.5em;
+            + li:before {
+                content: '· '
+            }
+        }
+    }
+}
+
+footer {
+    font-size: golden-ratio(1em, -1);
+
+    h1 {
+        font-size: golden-ratio(1em, 1);
+        margin-bottom: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    li {
+        vertical-align: top;
+
+        div {
+            display: inline-block;
+        }
+    }
+}
+
+code {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.index {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    nav {
+        margin: 1em 0;
+        text-align: right;
+    }
+}
+
+.profile {
+    img.avatar {
+        float: right;
+    }
+    @include clearfix;
+}
+
