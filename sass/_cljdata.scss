@@ -1,0 +1,12 @@
+
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+.bookframe {
+    float: right;
+}
+
+.bottom {
+    @include clearfix;
+}
+
