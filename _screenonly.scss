@@ -17,7 +17,7 @@
         }
 
         > footer > div {
-            width: $page-width;
+            width: $medium-width;
             margin-left: auto;
             margin-right: auto;
 
@@ -29,5 +29,10 @@
 }
 
 @media screen and (min-width: $wide-width) {
+    #container {
+        > footer > div {
+            width: $wide-width;
+        }
+    }
 }
 
