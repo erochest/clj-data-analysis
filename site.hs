@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import           Control.Applicative ((<$>))
-import           Data.Monoid         (mappend)
+import           Data.Monoid
 import           Hakyll
 
 
@@ -18,10 +18,10 @@ main = hakyll $ do
         compile compressCssCompiler
         -}
 
-    match ["index.html"] $ do
+    match "index.html" $ do
         route       idRoute
         compile $   getResourceBody
-                >>= loadAndApplyTemplates "templates/errstyle/default.html" postCtx
+                >>= loadAndApplyTemplate "templates/errstyle/default.html" postCtx
                 >>= relativizeUrls
 
     match "sass/main.scss" $ do
@@ -104,7 +104,8 @@ main = hakyll $ do
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
+    dateField "date" "%B %e, %Y" <>
+    constField "extra-header" "" <>
     defaultContext
 
 
