@@ -18,11 +18,44 @@ main = hakyll $ do
         compile compressCssCompiler
         -}
 
+    match ["index.html"] $ do
+        route       idRoute
+        compile $   getResourceBody
+                >>= loadAndApplyTemplates "templates/errstyle/default.html" postCtx
+                >>= relativizeUrls
+
+    match "sass/main.scss" $ do
+        route   $ constRoute "css/main.css"
+        compile sassCompiler
+
+    match "sass/index.scss" $ do
+        route   $ constRoute "css/index.css"
+        compile sassCompiler
+
     match "data/*" $ do
         route   idRoute
         compile copyFileCompiler
 
     match "data/UCI/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    match "*.png" $ do
+        route   idRoute
+        compile copyFileCompiler
+    match "*.ico" $ do
+        route   idRoute
+        compile copyFileCompiler
+    match "*.txt" $ do
+        route   idRoute
+        compile copyFileCompiler
+    match "img/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+    match "js/**" $ do
+        route   idRoute
+        compile copyFileCompiler
+    match "css/*.css" $ do
         route   idRoute
         compile copyFileCompiler
 
@@ -81,3 +114,12 @@ postList sortFilter = do
     posts   <- sortFilter <$> loadAll "posts/*"
     itemTpl <- loadBody "templates/post-item.html"
     applyTemplateList itemTpl postCtx posts
+
+sassCompiler :: Compiler (Item String)
+sassCompiler =
+        getResourceString >>=
+        withItemBody (unixFilter "sass" [ "--scss"
+                                        , "--stdin"
+                                        , "--load-path", "sass/errstyle/"
+                                        ])
+
