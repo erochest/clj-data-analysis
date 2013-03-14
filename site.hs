@@ -18,9 +18,9 @@ main = hakyll $ do
         compile compressCssCompiler
         -}
 
-    match "index.html" $ do
-        route       idRoute
-        compile $   getResourceBody
+    match "index.md" $ do
+        route   $   setExtension "html"
+        compile $   pandocCompiler
                 >>= loadAndApplyTemplate "templates/errstyle/default.html" postCtx
                 >>= relativizeUrls
 
@@ -121,6 +121,7 @@ sassCompiler =
         getResourceString >>=
         withItemBody (unixFilter "sass" [ "--scss"
                                         , "--stdin"
+                                        , "--load-path", "sass/"
                                         , "--load-path", "sass/errstyle/"
                                         ])
 
