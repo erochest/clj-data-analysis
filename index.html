@@ -32,8 +32,131 @@
 
           <div>
             <h2 id="clojure-data-analysis-cookbook">Clojure Data Analysis Cookbook</h2>
-<p>Welcome!</p>
-<iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=httpwwwericro-20&amp;o=1&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00BECVV9C" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<p><img class="bookframe" src="http://dgdsbygo8mp3h.cloudfront.net/sites/default/files/imagecache/productview_larger/2643OS_mockupcover_cb.jpg" /></p>
+<p>Looking to use Clojure for data analysis?</p>
+<p>This book covers <a href="http://incanter.org/">Incanter</a>, <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a>, and even goes into creating data visualizations for the web with <a href="http://d3js.org/">D3</a> and <a href="https://github.com/clojure/clojurescript">ClojureScript</a>. It provides over 100 recipes, some short and some more extended.</p>
+<p><strong>Due out March, 2013.</strong></p>
+<h3 id="data">Data</h3>
+<p>Throughout the book, I use a number of datasets. Some of these are standard datasets, some are from the <a href="http://archive.ics.uci.edu/ml/datasets.html">UCI Machine Learning Repository</a>, some from <a href="http://census.ire.org/">census.ire.org</a>, some from other sources, and some I’ve put together myself. I’ve uploaded them all here for archiving and easy access. Here they all are, with a few notes about each:</p>
+<dl>
+<dt><a href="http://census.ire.org/">2010 US Census Data</a></dt>
+<dd><p>This data is downloaded from the <a href="http://census.ire.org/">Investigative Reporters and Editors Census dataset</a> site. You can also download raw census data from the <a href="http://www.census.gov/">US Census Bureau</a>.</p>
+<ul>
+<li><a href="data/all_160.P3.csv">all_160.P3.csv</a>: This is race data (P3) from the census. This is a place-level summary (160), and I’ve merged this data for all states.</li>
+<li><a href="data/all_160_in_51.P3.csv">all_160_in_51.P3.csv</a>: This is race data (P3) from the census. This is a place-level summary (160) for Virginia (51).</li>
+<li><a href="data/all_160_in_51.P35.csv">all_160_in_51.P35.csv</a>: This is family counts (P35) from the census. This is a place level summary (160) for Virginia (51).</li>
+<li><a href="data/census-race.json">census-race.json</a>: This is the data from <code>all_160.P3.csv</code>, mentioned above, translated into JSON.</li>
+<li><a href="data/clusters.json">clusters.json</a>: This is a graph of the clusters of the data from <code>all_160.P3.csv</code>, mentioned above. The clusters were generated K-means clusters from that dataset aggregated by state. The JSON data structure represents the nodes and links (edges) in the graph, along with the aggregated data.</li>
+</ul>
+</dd>
+<dt><a href="http://archive.ics.uci.edu/ml/datasets/Abalone">Abalone</a></dt>
+<dd><p>This dataset is from the <a href="http://archive.ics.uci.edu/ml/datasets.html">UCI Machine Learning Repository</a>. It contains sex, age, and measurements of abalone. This can be used to predict the age from the fish’s physical measurements.</p>
+<ul>
+<li><a href="data/abalone.data">abalone.data</a>: This is the data in CSV format.</li>
+<li><a href="data/abalone.json">abalone.json</a>: The data from <code>abalone.data</code> formatted as JSON.</li>
+<li><a href="data/abalone.names">abalone.names</a>: This is information about the data, including the fields and their ranges of values.</li>
+</ul>
+</dd>
+<dt>Accident Fatalities</dt>
+<dd><p>This dataset was selected and downloaded from the US <a href="http://www-fars.nhtsa.dot.gov/QueryTool/QuerySection/selectyear.aspx">National Highway Traffic Safety Administration</a>. This dataset includes the speed limit and other factors related to the accidents.</p>
+<ul>
+<li><a href="data/accident-fatalities.tsv">accident-fatalities.tsv</a></li>
+</ul>
+</dd>
+<dt>Chick Weights</dt>
+<dd><p>This is from the <a href="http://liebke.github.com/incanter/datasets-api.html">Incanter datasets package</a>. It’s also found in the R datasets package.</p>
+<ul>
+<li><a href="data/chick-weight.json">chick-weight.json</a>: This is the Incanter dataset converted to JSON.</li>
+</ul>
+</dd>
+<dt>Currencies and Exchange Rates</dt>
+<dd><p>This is a couple of datasets used to illustrate working with semantic web data and web scraping.</p>
+<ul>
+<li><p><a href="data/currencies.ttl">currencies.ttl</a>: This dataset is from <a href="http://telegraphis.net/data/currencies/currencies.ttl">Telegraphis</a>, and it contains linked data with information about various currencies, such as the name, ISO codes, symbols.</p></li>
+<li><p><a href="data/x-rates-usd.html">x-rates-usd.html</a>: This is a snapshot of a rates table from <a href="http://www.x-rates.com/">X-Rates</a>.</p></li>
+</ul>
+</dd>
+<dt>Doctor Who Companions</dt>
+<dd><p>This is a dataset that I’ve pulled together from <a href="http://en.wikipedia.org/wiki/Doctor_Who_companions">Wikipedia</a> listing the actors and companions from the British television program <a href="http://www.bbc.co.uk/programmes/b006q2x0">Doctor Who</a>.</p>
+<ul>
+<li><a href="data/companions.clj">companions.clj</a>: This is a set of Clojure forms that define the in-memory data for this information.</li>
+<li><a href="data/companions.txt">companions.txt</a>: This is a list of the companions as CSV. It lists an identifier (usually the first name) for each and their first name.</li>
+</ul>
+</dd>
+<dt>FASTA datasets</dt>
+<dd><p>FASTA files are used in bioinformatics to exchange nucleotide and peptide sequences. This is a small collection of them to use for testing a custom FASTA parser.</p>
+<ul>
+<li><a href="data/abc-transporter.fasta">abc-transporter.fasta</a></li>
+<li><a href="data/dehydratase.fasta">dehydratase.fasta</a></li>
+<li><a href="data/elephas.fasta">elephas.fasta</a></li>
+<li><a href="data/maltophilia.fasta">maltophilia.fasta</a></li>
+<li><a href="data/mchu.fasta">mchu.fasta</a></li>
+<li><a href="data/ovax-chick.fasta">ovax-chick.fasta</a></li>
+<li><a href="data/salmonella.fasta">salmonella.fasta</a></li>
+<li><a href="data/seqeuence-1.fasta">seqeuence-1.fasta</a></li>
+<li><a href="data/sequences.fasta">sequences.fasta</a></li>
+<li><a href="data/transferase.fasta">transferase.fasta</a></li>
+</ul>
+</dd>
+<dt>IBM stock prices</dt>
+<dd><p>This dataset was downloaded from <a href="https://www.google.com/finance">Google Finance</a>. It contains the prices of IBM stock for the decade between <time>Nov 26, 2001</time> and <time>Nov 23, 2012</time>.</p>
+<ul>
+<li><a href="data/ibm.csv">ibm.csv</a></li>
+</ul>
+</dd>
+<dt><a href="http://archive.ics.uci.edu/ml/datasets/Ionosphere">Ionosphere data</a></dt>
+<dd><p>This dataset is from an antenna array in Labrador. It contains a number of measurements of free electrons in the ionosphere. This dataset can be found in the <a href="http://archive.ics.uci.edu/ml/datasets.html">UCI Machine Learning Repository</a>, but this dataset is in <a href="http://www.cs.waikato.ac.nz/ml/weka/arff.html">Attribute-Relation File Format (ARFF)</a> format for use with <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a>.</p>
+<ul>
+<li><a href="data/UCI/ionosphere.arff">ionosphere.arff</a>: This is pulled from the <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a> distribution for easier access.</li>
+</ul>
+</dd>
+<dt><a href="http://archive.ics.uci.edu/ml/datasets/Iris">Iris</a></dt>
+<dd><p>This is a standard dataset that’s almost everywhere. We also use the copy that ships with Incanter several times in the book. For more information about this dataset, see <a href="http://archive.ics.uci.edu/ml/datasets/Iris">its page</a> at the <a href="http://archive.ics.uci.edu/ml/datasets.html">UCI Machine Learning Repository</a>.</p>
+<ul>
+<li><a href="data/UCI/iris.arff">iris.arff</a>: This is pulled from the <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a> distribution for easier access.</li>
+</ul>
+</dd>
+<dt><a href="http://archive.ics.uci.edu/ml/datasets/Mushroom">Mushroom</a></dt>
+<dd><p>This is another standard dataset from the <a href="http://archive.ics.uci.edu/ml/datasets.html">UCI Machine Learning Repository</a>. This contains categorical data on mushrooms, including whether they’re edible or poisonous.</p>
+<ul>
+<li><a href="data/agaricus-lepiota.data">agaricus-lepiota.data</a>: The data file from the UCI web site.</li>
+<li><a href="data/agaricus-lepiota.names">agaricus-lepiota.names</a>: Information about the data, including field names.</li>
+<li><a href="data/mushroom.arff">mushroom.arff</a>: The same dataset packages as an ARFF file for <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a>.</li>
+</ul>
+</dd>
+<dt>TV-Related Sample Datasets</dt>
+<dd><p>These are a series of datasets I threw together to illustrate loading different data formats.</p>
+<ul>
+<li><a href="data/small-sample-header.csv">small-sample-header.csv</a></li>
+<li><a href="data/small-sample-header.xls">small-sample-header.xls</a></li>
+<li><a href="data/small-sample-list.html">small-sample-list.html</a></li>
+<li><a href="data/small-sample-table.html">small-sample-table.html</a></li>
+<li><a href="data/small-sample.csv">small-sample.csv</a></li>
+<li><a href="data/small-sample.json">small-sample.json</a></li>
+<li><a href="data/small-sample.sqlite">small-sample.sqlite</a></li>
+<li><a href="data/small-sample.xml">small-sample.xml</a></li>
+</ul>
+</dd>
+<dt><em>The Adventures of Sherlock Holmes</em></dt>
+<dd><p>This text is from <a href="http://www.gutenberg.org/">Project Gutenberg</a>. It’s a collection of Sherlock Holmes short stories written by Sir Arthur Conan Doyle.</p>
+<ul>
+<li><a href="data/pg1661.txt">pg1661.txt</a></li>
+</ul>
+</dd>
+<dt>Spelling Training Corpus</dt>
+<dd><p>This is the training corpus used in <a href="http://norvig.com/spell-correct.html">Peter Norvig’s article, “How to Write a Spelling Corrector.”</a></p>
+<ul>
+<li><a href="data/big.txt">big.txt</a></li>
+</ul>
+</dd>
+<dt>World Bank dataset</dt>
+<dd><p>I downloaded this dataset about income inequality from the <a href="http://data.worldbank.org/">World Bank</a>. It need to be filtered and pivoted, and here is the final result.</p>
+<ul>
+<li><a href="data/world-bank-filtered.csv">world-bank-filtered.csv</a></li>
+</ul>
+</dd>
+</dl>
+<div class="bottom"></div>
 
           </div>
 
@@ -42,12 +165,15 @@
               <div class="column">
                 <h1>Links</h1>
                 <ul>
-                  <li><a href="./">Home</a></li>
-                  <li><a href="./pages/">Index</a></li>
+                  <li><a href="http://www.ericrochester.com/">Home</a></li>
+                  <li><a href="http://www.ericrochester.com/pages/">Index</a></li>
                 </ul>
               </div>
               <div class="column">
                 <h1>Writing</h1>
+                <ul>
+                  <li><a href="http://www.ericrochester.com/clj-data-analysis/">Clojure Data Analysis</a></li>
+                </ul>
               <!-- </div>
             <div class='column'> -->
                 <h1>Projects</h1>
@@ -96,14 +222,11 @@
         <script src="./js/plugins.js"></script>
         <script src="./js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!--
         <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            var _gaq=[['_setAccount','UA-1756003-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-        -->
     </body>
 </html>

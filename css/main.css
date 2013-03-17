@@ -174,8 +174,21 @@ code {
   .profile:after {
     clear: both; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .bookframe {
   float: right; }
+
+.bottom {
+  *zoom: 1; }
+  .bottom:before, .bottom:after {
+    content: " ";
+    display: table; }
+  .bottom:after {
+    clear: both; }
 
 /* ==========================================================================
    Helper classes
