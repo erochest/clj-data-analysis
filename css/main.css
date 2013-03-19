@@ -153,6 +153,11 @@ footer {
     vertical-align: top; }
     footer li div {
       display: inline-block; }
+  footer .contact li {
+    display: inline-block;
+    padding-right: 1em; }
+    footer .contact li a {
+      text-decoration: none; }
 
 code {
   font-family: 'Ubuntu Mono', monospace; }
