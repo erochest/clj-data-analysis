@@ -115,6 +115,16 @@ footer {
             display: inline-block;
         }
     }
+
+    .contact {
+        li {
+            display: inline-block;
+            padding-right: 1em;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 code {
