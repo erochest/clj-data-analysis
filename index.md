@@ -13,7 +13,7 @@ creating data visualizations for the web with [D3][d3] and
 [ClojureScript][cljs]. It provides over 100 recipes, some short and some more
 extended.
 
-**Due out March, 2013.**
+**Now out!** Order this through [Packt][packtclj] or [Amazon][amazon].
 
 ### Data
 
