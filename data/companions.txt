@@ -45,3 +45,4 @@ amy,Amy Pond
 rory,Rory Williams
 river,River Song
 craig,Craig Owens
+clara,Clara Oswald

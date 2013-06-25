@@ -48,7 +48,8 @@
    {:given-name "Amy", :surname "Pond", :doctors [11]}
    {:given-name "Rory", :surname "Williams", :doctors [11]}
    {:given-name "River", :surname "Song", :doctors [11]}
-   {:given-name "Craig", :surname "Owens", :doctors [11]}])
+   {:given-name "Craig", :surname "Owens", :doctors [11]}
+   {:given-name "Clara", :surname "Oswald", :doctors [11]}])
 
 (def companion (map string/lower-case
                     (map :given-name input-data)))
