@@ -192,6 +192,10 @@ World Bank dataset
 
     - [world-bank-filtered.csv](data/world-bank-filtered.csv)
 
+:   This is a dataset on how much land is used for agriculture in China.
+
+    - [chn-land.csv](data/chn-land.csv)
+
 Delicious RSS Feed
 
 :   This is a compressed subset of a delicious RSS feed scraping. I can't find
