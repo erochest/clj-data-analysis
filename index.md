@@ -199,6 +199,12 @@ Delicious RSS Feed
 
     - [delicious-rss-214k.json.xz](data/delicious-rss-214k.json.xz)
 
+State of the Union dataset
+
+:   This is a scraping of US Presidents' State of the Union (SOTU) addresses.
+
+    - [sotu.tar.gz](data/sotu.tar.gz)
+
 <div class='bottom'></div>
 
 [packt]: http://www.packtpub.com/
