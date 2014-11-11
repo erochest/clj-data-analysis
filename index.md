@@ -192,6 +192,13 @@ World Bank dataset
 
     - [world-bank-filtered.csv](data/world-bank-filtered.csv)
 
+Delicious RSS Feed
+
+:   This is a compressed subset of a delicious RSS feed scraping. I can't find
+    the original online anywhere anymore, so I'm putting it here.
+
+    - [delicious-rss-214k.json.xz](data/delicious-rss-214k.json.xz)
+
 <div class='bottom'></div>
 
 [packt]: http://www.packtpub.com/
