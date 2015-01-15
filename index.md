@@ -209,6 +209,12 @@ State of the Union dataset
 
     - [sotu.tar.gz](data/sotu.tar.gz)
 
+Flight Data
+
+:   This is a compressed copy of data on US domestic flights from 1990–2009.
+
+    - [flights_with_colnames.csv.gz](data/flights_with_colnames.csv.gz)
+
 <div class='bottom'></div>
 
 [packt]: http://www.packtpub.com/
