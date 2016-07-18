@@ -23,197 +23,236 @@ datasets, some are from the [UCI Machine Learning Repository][uci], some from
 myself. I've uploaded them all here for archiving and easy access. Here they
 all are, with a few notes about each:
 
-[2010 US Census Data][ire]
+<div class="divider"></div><div class="section">
 
-:   This data is downloaded from the [Investigative Reporters and Editors
-    Census dataset][ire] site. You can also download raw census data from the
-    [US Census Bureau][census].
+#### [2010 US Census Data][ire]
 
-    - [all_160.P3.csv](data/all_160.P3.csv): This is race data (P3) from the
-    census. This is a place-level summary (160), and I've merged this data for
-    all states.
-    - [all_160_in_51.P3.csv](data/all_160_in_51.P3.csv): This is race data (P3)
-    from the census. This is a place-level summary (160) for Virginia (51).
-    - [all_160_in_51.P35.csv](data/all_160_in_51.P35.csv): This is family
-    counts (P35) from the census. This is a place level summary (160) for
-    Virginia (51).
-    - [census-race.json](data/census-race.json): This is the data from
-    `all_160.P3.csv`, mentioned above, translated into JSON.
-    - [clusters.json](data/clusters.json): This is a graph of the clusters of
-    the data from `all_160.P3.csv`, mentioned above. The clusters were
-    generated K-means clusters from that dataset aggregated by state. The JSON
-    data structure represents the nodes and links (edges) in the graph, along
-    with the aggregated data.
+This data is downloaded from the [Investigative Reporters and Editors
+Census dataset][ire] site. You can also download raw census data from the
+[US Census Bureau][census].
 
-[Abalone][abalone]
+- [all_160.P3.csv](data/all_160.P3.csv): This is race data (P3) from the
+  census. This is a place-level summary (160), and I've merged this data
+  for all states.
+- [all_160_in_51.P3.csv](data/all_160_in_51.P3.csv): This is race data
+  (P3) from the census. This is a place-level summary (160) for Virginia
+  (51).
+- [all_160_in_51.P35.csv](data/all_160_in_51.P35.csv): This is family
+  counts (P35) from the census. This is a place level summary (160) for
+  Virginia (51).
+- [census-race.json](data/census-race.json): This is the data from
+  `all_160.P3.csv`, mentioned above, translated into JSON.
+- [clusters.json](data/clusters.json): This is a graph of the clusters of
+  the data from `all_160.P3.csv`, mentioned above. The clusters were
+  generated K-means clusters from that dataset aggregated by state. The
+  JSON data structure represents the nodes and links (edges) in the graph,
+  along with the aggregated data.
 
-:   This dataset is from the [UCI Machine Learning Repository][uci]. It
-    contains sex, age, and measurements of abalone. This can be used to
-    predict the age from the fish's physical measurements.
+</div><div class="divider"></div><div class="section">
 
-    - [abalone.data](data/abalone.data): This is the data in CSV format.
-    - [abalone.json](data/abalone.json): The data from `abalone.data` formatted
-      as JSON.
-    - [abalone.names](data/abalone.names): This is information about the data,
-      including the fields and their ranges of values.
+#### [Abalone][abalone]
 
-Accident Fatalities
+This dataset is from the [UCI Machine Learning Repository][uci]. It
+contains sex, age, and measurements of abalone. This can be used to
+predict the age from the fish's physical measurements.
 
-:   This dataset was selected and downloaded from the US [National Highway
-    Traffic Safety Administration][nhtsa]. This dataset includes the speed
-    limit and other factors related to the accidents.
+- [abalone.data](data/abalone.data): This is the data in CSV format.
+- [abalone.json](data/abalone.json): The data from `abalone.data`
+  formatted as JSON.
+- [abalone.names](data/abalone.names): This is information about the data,
+  including the fields and their ranges of values.
 
-    - [accident-fatalities.tsv](data/accident-fatalities.tsv)
+</div><div class="divider"></div><div class="section">
 
-Chick Weights
+#### Accident Fatalities
 
-:   This is from the [Incanter datasets package][datasets]. It's also found in
-    the R datasets package.
+This dataset was selected and downloaded from the US [National Highway
+Traffic Safety Administration][nhtsa]. This dataset includes the speed
+limit and other factors related to the accidents.
 
-    - [chick-weight.json](data/chick-weight.json): This is the Incanter dataset
-      converted to JSON.
+- [accident-fatalities.tsv](data/accident-fatalities.tsv)
 
-Currencies and Exchange Rates
+</div><div class="divider"></div><div class="section">
 
-:   This is a couple of datasets used to illustrate working with semantic web
-    data and web scraping.
+#### Chick Weights
 
-    - [currencies.ttl](data/currencies.ttl): This dataset is from
-      [Telegraphis][telegraphis], and it contains linked data with information
-      about various currencies, such as the name, ISO codes, symbols.
+This is from the [Incanter datasets package][datasets]. It's also found in
+the R datasets package.
 
-    - [x-rates-usd.html](data/x-rates-usd.html): This is a snapshot of a rates
-      table from [X-Rates][xrates].
+- [chick-weight.json](data/chick-weight.json): This is the Incanter
+  dataset converted to JSON.
 
-Doctor Who Companions
+</div><div class="divider"></div><div class="section">
 
-:   This is a dataset that I've pulled together from [Wikipedia][wikip] listing
-    the actors and companions from the British television program [Doctor
-    Who][drwho].
+#### Currencies and Exchange Rates
 
-    - [companions.clj](data/companions.clj): This is a set of Clojure forms
-      that define the in-memory data for this information.
-    - [companions.txt](data/companions.txt): This is a list of the companions
-      as CSV. It lists an identifier (usually the first name) for each and
-      their first name.
+This is a couple of datasets used to illustrate working with semantic web
+data and web scraping.
 
-FASTA datasets
+- [currencies.ttl](data/currencies.ttl): This dataset is from
+  [Telegraphis][telegraphis], and it contains linked data with information
+  about various currencies, such as the name, ISO codes, symbols.
 
-:   FASTA files are used in bioinformatics to exchange nucleotide and peptide
-    sequences. This is a small collection of them to use for testing a custom
-    FASTA parser.
+- [x-rates-usd.html](data/x-rates-usd.html): This is a snapshot of a rates
+  table from [X-Rates][xrates].
 
-    - [abc-transporter.fasta](data/abc-transporter.fasta)
-    - [dehydratase.fasta](data/dehydratase.fasta)
-    - [elephas.fasta](data/elephas.fasta)
-    - [maltophilia.fasta](data/maltophilia.fasta)
-    - [mchu.fasta](data/mchu.fasta)
-    - [ovax-chick.fasta](data/ovax-chick.fasta)
-    - [salmonella.fasta](data/salmonella.fasta)
-    - [seqeuence-1.fasta](data/seqeuence-1.fasta)
-    - [sequences.fasta](data/sequences.fasta)
-    - [transferase.fasta](data/transferase.fasta)
+</div><div class="divider"></div><div class="section">
 
-IBM stock prices
+#### Doctor Who Companions
 
-:   This dataset was downloaded from [Google Finance][gfinance]. It contains
-    the prices of IBM stock for the decade between <time>Nov 26, 2001</time>
-    and <time>Nov 23, 2012</time>.
+This is a dataset that I've pulled together from [Wikipedia][wikip]
+listing the actors and companions from the British television program
+[Doctor Who][drwho].
 
-    - [ibm.csv](data/ibm.csv)
+- [companions.clj](data/companions.clj): This is a set of Clojure forms
+  that define the in-memory data for this information.
+- [companions.txt](data/companions.txt): This is a list of the companions
+  as CSV. It lists an identifier (usually the first name) for each and
+  their first name.
 
-[Ionosphere data][ionosphere]
+</div><div class="divider"></div><div class="section">
 
-:   This dataset is from an antenna array in Labrador. It contains a number of
-    measurements of free electrons in the ionosphere. This dataset can be
-    found in the [UCI Machine Learning Repository][uci], but this dataset is
-    in [Attribute-Relation File Format (ARFF)][arff] format for use with
-    [Weka][weka].
+#### FASTA datasets
 
-    - [ionosphere.arff](data/UCI/ionosphere.arff): This is pulled from the
-      [Weka][weka] distribution for easier access.
+FASTA files are used in bioinformatics to exchange nucleotide and peptide
+sequences. This is a small collection of them to use for testing a custom
+FASTA parser.
 
-[Iris][iris]
+- [abc-transporter.fasta](data/abc-transporter.fasta)
+- [dehydratase.fasta](data/dehydratase.fasta)
+- [elephas.fasta](data/elephas.fasta)
+- [maltophilia.fasta](data/maltophilia.fasta)
+- [mchu.fasta](data/mchu.fasta)
+- [ovax-chick.fasta](data/ovax-chick.fasta)
+- [salmonella.fasta](data/salmonella.fasta)
+- [seqeuence-1.fasta](data/seqeuence-1.fasta)
+- [sequences.fasta](data/sequences.fasta)
+- [transferase.fasta](data/transferase.fasta)
 
-:   This is a standard dataset that's almost everywhere. We also use the copy
-    that ships with Incanter several times in the book. For more information
-    about this dataset, see [its page][iris] at the [UCI Machine Learning
-    Repository][uci].
+</div><div class="divider"></div><div class="section">
 
-    - [iris.arff](data/UCI/iris.arff): This is pulled from the [Weka][weka]
-      distribution for easier access.
+#### IBM stock prices
 
-[Mushroom][mushroom]
+This dataset was downloaded from [Google Finance][gfinance]. It contains
+the prices of IBM stock for the decade between <time>Nov 26, 2001</time>
+and <time>Nov 23, 2012</time>.
 
-:   This is another standard dataset from the [UCI Machine Learning
-    Repository][uci]. This contains categorical data on mushrooms, including
-    whether they're edible or poisonous.
+- [ibm.csv](data/ibm.csv)
 
-    - [agaricus-lepiota.data](data/agaricus-lepiota.data): The data file from
-      the UCI web site.
-    - [agaricus-lepiota.names](data/agaricus-lepiota.names): Information about
-      the data, including field names.
-    - [mushroom.arff](data/mushroom.arff): The same dataset packages as an ARFF
-      file for [Weka][weka].
+</div><div class="divider"></div><div class="section">
 
-TV-Related Sample Datasets
+#### [Ionosphere data][ionosphere]
 
-:   These are a series of datasets I threw together to illustrate loading
-    different data formats.
+This dataset is from an antenna array in Labrador. It contains a number of
+measurements of free electrons in the ionosphere. This dataset can be
+found in the [UCI Machine Learning Repository][uci], but this dataset is
+in [Attribute-Relation File Format (ARFF)][arff] format for use with
+[Weka][weka].
 
-    - [small-sample-header.csv](data/small-sample-header.csv)
-    - [small-sample-header.xls](data/small-sample-header.xls)
-    - [small-sample-list.html](data/small-sample-list.html)
-    - [small-sample-table.html](data/small-sample-table.html)
-    - [small-sample.csv](data/small-sample.csv)
-    - [small-sample.json](data/small-sample.json)
-    - [small-sample.sqlite](data/small-sample.sqlite)
-    - [small-sample.xml](data/small-sample.xml)
+- [ionosphere.arff](data/UCI/ionosphere.arff): This is pulled from the
+  [Weka][weka] distribution for easier access.
 
-*The Adventures of Sherlock Holmes*
+</div><div class="divider"></div><div class="section">
 
-:   This text is from [Project Gutenberg][gutenberg]. It's a collection of
-    Sherlock Holmes short stories written by Sir Arthur Conan Doyle.
+#### [Iris][iris]
 
-    - [pg1661.txt](data/pg1661.txt)
+This is a standard dataset that's almost everywhere. We also use the copy
+that ships with Incanter several times in the book. For more information
+about this dataset, see [its page][iris] at the [UCI Machine Learning
+Repository][uci].
 
-Spelling Training Corpus
+- [iris.arff](data/UCI/iris.arff): This is pulled from the [Weka][weka]
+  distribution for easier access.
 
-:   This is the training corpus used in [Peter Norvig's article, "How to Write
-    a Spelling Corrector."][norvig]
+</div><div class="divider"></div><div class="section">
 
-    - [big.txt](data/big.txt)
+#### [Mushroom][mushroom]
 
-World Bank dataset
+This is another standard dataset from the [UCI Machine Learning
+Repository][uci]. This contains categorical data on mushrooms, including
+whether they're edible or poisonous.
 
-:   I downloaded this dataset about income inequality from the [World
-    Bank][worldbank]. It need to be filtered and pivoted, and here is the final
-    result.
+- [agaricus-lepiota.data](data/agaricus-lepiota.data): The data file from
+  the UCI web site.
+- [agaricus-lepiota.names](data/agaricus-lepiota.names): Information about
+  the data, including field names.
+- [mushroom.arff](data/mushroom.arff): The same dataset packages as an
+  ARFF file for [Weka][weka].
 
-    - [world-bank-filtered.csv](data/world-bank-filtered.csv)
+</div><div class="divider"></div><div class="section">
 
-:   This is a dataset on how much land is used for agriculture in China.
+#### TV-Related Sample Datasets
 
-    - [chn-land.csv](data/chn-land.csv)
+These are a series of datasets I threw together to illustrate loading
+different data formats.
 
-Delicious RSS Feed
+- [small-sample-header.csv](data/small-sample-header.csv)
+- [small-sample-header.xls](data/small-sample-header.xls)
+- [small-sample-list.html](data/small-sample-list.html)
+- [small-sample-table.html](data/small-sample-table.html)
+- [small-sample.csv](data/small-sample.csv)
+- [small-sample.json](data/small-sample.json)
+- [small-sample.sqlite](data/small-sample.sqlite)
+- [small-sample.xml](data/small-sample.xml)
 
-:   This is a compressed subset of a delicious RSS feed scraping. I can't find
-    the original online anywhere anymore, so I'm putting it here.
+</div><div class="divider"></div><div class="section">
 
-    - [delicious-rss-214k.json.xz](data/delicious-rss-214k.json.xz)
+#### *The Adventures of Sherlock Holmes*
 
-State of the Union dataset
+This text is from [Project Gutenberg][gutenberg]. It's a collection of
+Sherlock Holmes short stories written by Sir Arthur Conan Doyle.
 
-:   This is a scraping of US Presidents' State of the Union (SOTU) addresses.
+- [pg1661.txt](data/pg1661.txt)
 
-    - [sotu.tar.gz](data/sotu.tar.gz)
+</div><div class="divider"></div><div class="section">
 
-Flight Data
+#### Spelling Training Corpus
 
-:   This is a compressed copy of data on US domestic flights from 1990–2009.
+This is the training corpus used in [Peter Norvig's article, "How to Write
+a Spelling Corrector."][norvig]
 
-    - [flights_with_colnames.csv.gz](data/flights_with_colnames.csv.gz)
+- [big.txt](data/big.txt)
+
+</div><div class="divider"></div><div class="section">
+
+#### World Bank dataset
+
+I downloaded this dataset about income inequality from the [World
+Bank][worldbank]. It need to be filtered and pivoted, and here is the
+final result.
+
+- [world-bank-filtered.csv](data/world-bank-filtered.csv)
+
+This is a dataset on how much land is used for agriculture in China.
+
+- [chn-land.csv](data/chn-land.csv)
+
+</div><div class="divider"></div><div class="section">
+
+#### Delicious RSS Feed
+
+This is a compressed subset of a delicious RSS feed scraping. I can't find
+the original online anywhere anymore, so I'm putting it here.
+
+- [delicious-rss-214k.json.xz](data/delicious-rss-214k.json.xz)
+
+</div><div class="divider"></div><div class="section">
+
+#### State of the Union dataset
+
+This is a scraping of US Presidents' State of the Union (SOTU) addresses.
+
+- [sotu.tar.gz](data/sotu.tar.gz)
+
+</div><div class="divider"></div><div class="section">
+
+#### Flight Data
+
+This is a compressed copy of data on US domestic flights from 1990–2009.
+
+- [flights_with_colnames.csv.gz](data/flights_with_colnames.csv.gz)
+
+</div><div class="divider"></div>
 
 <div class='bottom'></div>
 
